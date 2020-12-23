@@ -1,0 +1,28 @@
+#!/bin/bash
+
+echo "We Will be change the MAC address of your wireless card"
+
+sleep 3
+
+echo "We will display all the network adapters available"
+
+ifconfig
+
+echo "Type the wireless adapter for which you would like to change the MAC address"
+
+read MAC
+
+echo "We will bring the wireless card down"
+
+ifconfig $MAC down
+
+echo "The wireless card is down"
+
+#randomly assigns MAC address (Temporary change)
+macchager -r $MAC
+
+sleep 5
+
+echo "MAC address is assigned"
+
+ifconfig $MAC up
